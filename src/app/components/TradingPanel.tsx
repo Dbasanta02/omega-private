@@ -6,7 +6,7 @@ export default function TradingPanel() {
   const [log, setLog] = useState<string[]>([]);
 
   const executeMockTrade = () => {
-    const trade = ?? Omega executed trade at \;
+    const trade = `?? Omega executed trade at ${new Date().toLocaleTimeString()}`;
     setLog(prev => [trade, ...prev]);
   };
 

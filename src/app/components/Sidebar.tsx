@@ -21,7 +21,9 @@ export default function Sidebar() {
           <button
             key={item.key}
             onClick={() => setActive(item.key)}
-            className={lex items-center gap-3 p-3 rounded-xl transition-all duration-300 }
+            className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-300 ${
+              active === item.key ? 'bg-white text-black' : 'hover:bg-gray-800'
+            }`}
           >
             {item.icon}
             <span className="font-semibold">{item.name}</span>

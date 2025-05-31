@@ -3,13 +3,13 @@
 import Sidebar from './components/Sidebar';
 import TradingPanel from './components/TradingPanel';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="flex h-screen w-screen bg-gray-100">
+    <div className="flex h-screen">
       <Sidebar />
-      <div className="flex-grow p-4">
+      <div className="flex-1 bg-gray-50 p-6 overflow-auto">
         <TradingPanel />
       </div>
-    </main>
+    </div>
   );
 }

@@ -1,7 +1,6 @@
-import axios from 'axios';
-import cheerio from 'cheerio';
-import fs from 'fs';
-import path from 'path';
+'use server';
 
-// News intake logic placeholder
-console.log('Omega News Intake running');
+// News intake placeholder logic
+export async function fetchLatestNewsHeadlines() {
+  return ['📰 Headline 1', '📰 Headline 2', '📰 Headline 3'];
+}

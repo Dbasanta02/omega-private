@@ -1,4 +1,4 @@
-﻿/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
 
 module.exports = {
@@ -6,7 +6,7 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
+    extend: { colors: { neon: { green: "#39FFBE", blue: "#437EFF" } },
       colors: {
         ...colors,
         'neon-cyan': '#00f0ff',

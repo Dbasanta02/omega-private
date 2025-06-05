@@ -1,18 +1,15 @@
-import './globals.css'; // 
-
-import OmegaLayout from './components/OmegaLayout';
+﻿import "./globals.css";
+import { ReactNode } from "react";
 
 export const metadata = {
-  title: 'Omega AI Dashboard',
-  description: 'The most advanced AI trading interface ever built.',
+  title: "Omega AI Dashboard",
+  description: "God-tier Autonomous Trading Intelligence",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <OmegaLayout />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

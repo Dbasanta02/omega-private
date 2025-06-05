@@ -1,4 +1,4 @@
-﻿/* === Omega Global Styles === */
+/* === Omega Global Styles === */
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 @layer base {
   html, body {
-    @apply bg-gradient-to-br from-gray-900 via-black to-gray-950 text-neon-cyan font-sans antialiased;
+    @apply bg-gradient-to-br from-gray-800 via-black to-gray-950 text-neon-cyan font-sans antialiased;
   }
 
   ::selection {

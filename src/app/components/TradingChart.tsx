@@ -41,3 +41,4 @@ export default function TradingChart() {
     </div>
   );
 }
+import { Chart } from 'chart.js';

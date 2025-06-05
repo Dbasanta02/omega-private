@@ -1,11 +1,11 @@
-﻿import OmegaHeader from './OmegaHeader';
+import OmegaHeader from './OmegaHeader';
 import OmegaSidebar from './OmegaSidebar';
 import OmegaMainPanel from './OmegaMainPanel';
 import OmegaFooter from './OmegaFooter';
 
 export default function OmegaLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-950 text-neon-cyan font-sans'>
+    <div className='flex flex-col min-h-screen bg-gradient-to-br from-zinc-900 via-black to-gray-950 text-neon-cyan font-sans'>
       {/* Header */}
       <OmegaHeader />
 

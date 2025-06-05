@@ -1,7 +1,18 @@
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import './globals.css'; // 
+
+import OmegaLayout from './components/OmegaLayout';
+
+export const metadata = {
+  title: 'Omega AI Dashboard',
+  description: 'The most advanced AI trading interface ever built.',
+};
+
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white font-sans">{children}</body>
+      <body>
+        <OmegaLayout />
+      </body>
     </html>
   );
 }

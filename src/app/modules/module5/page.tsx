@@ -1,35 +1,35 @@
-'use client'
+'use client';
+import React, { useEffect, useState } from 'react';
 
-import React, { useState, useEffect } from 'react';
-
-type AlertType = 'ALERT' | 'NEWS' | 'PATTERN';
-type NewsAlert = {
+interface Alert {
   id: number;
+  time: string;
   source: string;
-  type: AlertType;
+  type: 'ALERT' | 'NEWS' | 'PATTERN';
   message: string;
-};
+}
 
 export default function Module5() {
-  const [alerts, setAlerts] = useState<NewsAlert[]>([]);
+  const [alerts, setAlerts] = useState<Alert[]>([]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const newAlert: NewsAlert = {
-        id: Date.now(),
+    const dummyAlerts: Alert[] = [
+      {
+        id: 1,
+        time: new Date().toLocaleTimeString(),
         source: 'Omega AI',
-        type: ['ALERT', 'NEWS', 'PATTERN'][Math.floor(Math.random() * 3)] as AlertType,
-        message: [
-          'Whale spotted buying > &#39;',
-          'High-impact CPI data incoming',
-          'S&P 500 triple top forming',
-          'Oil Futures breakout detected'
-        ][Math.floor(Math.random() * 4)],
-      };
-      setAlerts((prev) => [...prev.slice(-4), newAlert]);
-    }, 6000);
-
-    return () => clearInterval(interval);
+        type: 'NEWS',
+        message: 'Whale spotted buying > 1M USDT in BTC',
+      },
+      {
+        id: 2,
+        time: new Date().toLocaleTimeString(),
+        source: 'Omega AI',
+        type: 'ALERT',
+        message: 'CPI data release imminent',
+      },
+    ];
+    setAlerts(dummyAlerts);
   }, []);
 
   return (
@@ -37,12 +37,9 @@ export default function Module5() {
       <h2 className="text-2xl font-bold mb-4">Omega Live Intelligence Feed</h2>
       <div className="space-y-3">
         {alerts.map((alert) => (
-          <div
-            key={alert.id}
-            className={p-4 border-l-4  bg-white/10 rounded}
-          >
-            <p className="text-sm text-gray-400">Source: {alert.source}</p>
-            <p className="font-medium">{alert.message}</p>
+          <div key={alert.id} className="border border-white/30 rounded-lg p-3 bg-white/10">
+            <div className="text-sm text-gray-300">{alert.time} — {alert.source}</div>
+            <div className="font-semibold">{alert.type}: {alert.message}</div>
           </div>
         ))}
       </div>

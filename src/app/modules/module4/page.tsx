@@ -1,55 +1,44 @@
 ﻿'use client';
-import React, { useState } from 'react';
+import React from 'react';
 
-type Simulation = {
-  id: number;
-  asset: string;
-  strategy: string;
-  predictedMove: string;
-  execution: string;
-};
+const trades = [
+  {
+    id: 1,
+    asset: 'CRYPTO: BTCUSDT',
+    strategy: 'MACD Cross + RSI Oversold',
+    predictedMove: 'Upward breakout',
+    execution: 'Long @ ,300 → Exit @ ,500'
+  },
+  {
+    id: 2,
+    asset: 'CRYPTO: ETHUSDT',
+    strategy: 'Mean Reversion + Bollinger Bands',
+    predictedMove: 'Reversal to mid-band zone',
+    execution: 'Long @ ,400 → Exit @ ,700'
+  },
+  {
+    id: 3,
+    asset: 'CRYPTO: SOLUSDT',
+    strategy: 'Volume Spike Detection',
+    predictedMove: 'Sharp upward breakout',
+    execution: 'Long @  → Exit @ '
+  },
+];
 
 export default function Module4() {
-  const [simulations, setSimulations] = useState<Simulation[]>([
-    {
-      id: 1,
-      asset: 'NASDAQ: TSLA',
-      strategy: 'Momentum + Volume Spike',
-      predictedMove: 'Bullish breakout after consolidation',
-      execution: 'Buy @ \.50 → Target \.00'
-    },
-    {
-      id: 2,
-      asset: 'CRYPTO: ETHUSDT',
-      strategy: 'Mean Reversion + Bollinger Bands',
-      predictedMove: 'Reversal to mid-band zone',
-      execution: 'Long @ \ → Exit \'
-    },
-    {
-      id: 3,
-      asset: 'FOREX: EUR/USD',
-      strategy: 'MACD Divergence + Fibonacci',
-      predictedMove: 'Pullback before breakout',
-      execution: 'Buy @ 1.072 → TP 1.084'
-    }
-  ]);
-
   return (
-    <main className="min-h-screen bg-black text-white p-6">
-      <h1 className="text-4xl font-bold text-neon-green mb-4">Tactical Execution Simulator</h1>
-      <p className="text-gray-400 max-w-2xl mb-8">
-        This module simulates Omega’s tactical execution across global assets using advanced algorithmic logic.
-      </p>
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {simulations.map((sim) => (
-          <div key={sim.id} className="border border-neon-green rounded-2xl p-4 hover:bg-neon-green hover:text-black transition">
-            <h2 className="text-xl font-semibold mb-1">{sim.asset}</h2>
-            <p className="text-sm mb-1 text-gray-300">Strategy: {sim.strategy}</p>
-            <p className="text-sm mb-1 text-gray-300">Prediction: {sim.predictedMove}</p>
-            <p className="text-sm text-neon-green font-bold">Execution: {sim.execution}</p>
-          </div>
+    <div className="p-6 text-white">
+      <h1 className="text-3xl font-bold mb-4">Omega Crypto Trade Insights</h1>
+      <ul className="space-y-4">
+        {trades.map(trade => (
+          <li key={trade.id} className="bg-black bg-opacity-30 p-4 rounded-xl border border-neon-green">
+            <p><strong>Asset:</strong> {trade.asset}</p>
+            <p><strong>Strategy:</strong> {trade.strategy}</p>
+            <p><strong>Prediction:</strong> {trade.predictedMove}</p>
+            <p><strong>Execution:</strong> {trade.execution}</p>
+          </li>
         ))}
-      </div>
-    </main>
+      </ul>
+    </div>
   );
 }

@@ -1,18 +1,18 @@
-﻿'use client';
-import React from 'react';
+'use client&#39;;
+import React from &#39;react&#39;;
 
 export default function Module6() {
   return (
     <main className="min-h-screen bg-black text-white p-10">
       <section className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-yellow-400 mb-4">📰 Omega Global News Intelligence</h1>
+        <h1 className="text-4xl font-bold text-yellow-400 mb-4">?? Omega Global News Intelligence</h1>
         <p className="text-lg text-gray-300 mb-8">
-          This engine scans and decodes global news, macroeconomic triggers, and regulatory developments in real-time. All extracted intelligence is routed into Omega's strategy system to adapt instantly to external shocks.
+          This engine scans and decodes global news, macroeconomic triggers, and regulatory developments in real-time. All extracted intelligence is routed into Omega&#39;s strategy system to adapt instantly to external shocks.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-gray-900 rounded-xl p-6 border border-yellow-400 shadow-lg">
-            <h2 className="text-2xl font-semibold text-yellow-300 mb-2">🌍 Global Macro Feed</h2>
+            <h2 className="text-2xl font-semibold text-yellow-300 mb-2">?? Global Macro Feed</h2>
             <ul className="list-disc list-inside text-gray-200">
               <li>Economic Policy Updates</li>
               <li>War/Conflict Alerts</li>
@@ -22,7 +22,7 @@ export default function Module6() {
           </div>
 
           <div className="bg-gray-900 rounded-xl p-6 border border-yellow-400 shadow-lg">
-            <h2 className="text-2xl font-semibold text-yellow-300 mb-2">📈 Financial Impact Analysis</h2>
+            <h2 className="text-2xl font-semibold text-yellow-300 mb-2">?? Financial Impact Analysis</h2>
             <ul className="list-disc list-inside text-gray-200">
               <li>News Sentiment Score</li>
               <li>Predicted Market Volatility</li>

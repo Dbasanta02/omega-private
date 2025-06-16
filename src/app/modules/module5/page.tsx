@@ -1,32 +1,51 @@
-﻿'use client';
-import React from 'react';
+'use client'
 
-const alerts = [
-  {
-    id: 1,
-    source: 'Omega AI',
-    type: ['ALERT', 'NEWS', 'PATTERN'][Math.floor(Math.random() * 3)] as any,
-    message: [
-      'Whale spotted buying >',
-      'High-impact CPI data incoming',
-      'S&P 500 triple top forming',
-      'Oil Futures breakout detected'
-    ][Math.floor(Math.random() * 4)],
-  },
-];
+import React, { useState, useEffect } from 'react';
+
+type AlertType = 'ALERT' | 'NEWS' | 'PATTERN';
+type NewsAlert = {
+  id: number;
+  source: string;
+  type: AlertType;
+  message: string;
+};
 
 export default function Module5() {
+  const [alerts, setAlerts] = useState<NewsAlert[]>([]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newAlert: NewsAlert = {
+        id: Date.now(),
+        source: 'Omega AI',
+        type: ['ALERT', 'NEWS', 'PATTERN'][Math.floor(Math.random() * 3)] as AlertType,
+        message: [
+          'Whale spotted buying > &#39;',
+          'High-impact CPI data incoming',
+          'S&P 500 triple top forming',
+          'Oil Futures breakout detected'
+        ][Math.floor(Math.random() * 4)],
+      };
+      setAlerts((prev) => [...prev.slice(-4), newAlert]);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="p-6 text-white">
-      <h1 className="text-3xl font-bold mb-4">Omega Intelligence Alerts</h1>
-      <ul className="space-y-4">
-        {alerts.map(alert => (
-          <li key={alert.id} className="bg-black bg-opacity-30 p-4 rounded-xl border border-neon-blue">
-            <p><strong>Type:</strong> {alert.type}</p>
-            <p><strong>Message:</strong> {alert.message}</p>
-          </li>
+      <h2 className="text-2xl font-bold mb-4">Omega Live Intelligence Feed</h2>
+      <div className="space-y-3">
+        {alerts.map((alert) => (
+          <div
+            key={alert.id}
+            className={p-4 border-l-4  bg-white/10 rounded}
+          >
+            <p className="text-sm text-gray-400">Source: {alert.source}</p>
+            <p className="font-medium">{alert.message}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

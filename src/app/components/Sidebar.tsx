@@ -1,26 +1,17 @@
 ﻿'use client';
-import Link from 'next/link';
-import { useState } from 'react';
+import React from 'react';
 
-export default function SideBar() {
-  const [open, setOpen] = useState(true);
-
+export default function Sidebar() {
   return (
-    <div className={\\ bg-gray-900 min-h-screen text-white transition-all duration-300 flex flex-col\}>
-      <button 
-        onClick={() => setOpen(!open)} 
-        className=\"p-3 focus:outline-none hover:bg-gray-800 border-b border-gray-700\"
-      >
-        {open ? '<' : '>'}
-      </button>
-      <div className=\"p-4 flex flex-col gap-4 text-sm\">
-        <Link href=\"/\" className=\"hover:text-neon-green\">🏠 Dashboard</Link>
-        <Link href=\"/modules/module1\" className=\"hover:text-neon-green\">🧠 Core Mind</Link>
-        <Link href=\"/modules/module14\" className=\"hover:text-neon-green\">🔁 Core Nexus</Link>
-        <Link href=\"/modules/module5\" className=\"hover:text-neon-green\">📡 Market Feed</Link>
-        <Link href=\"/modules/module20\" className=\"hover:text-neon-green\">🛡️ Trade Safety</Link>
-        <Link href=\"/modules/module32\" className=\"hover:text-neon-green\">⚡ Quantum Engine</Link>
-      </div>
-    </div>
+    <aside className='w-64 p-4 text-white bg-black/10 border-r border-white/20'>
+      <h2 className='text-lg font-semibold mb-4'>Modules</h2>
+      <ul className='space-y-2'>
+        {Array.from({ length: 33 }, (_, i) => (
+          <li key={i}>
+            <a href={'/modules/module' + (i + 1)}>Module {i + 1}</a>
+          </li>
+        ))}
+      </ul>
+    </aside>
   );
 }

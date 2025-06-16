@@ -1,20 +1,20 @@
-﻿'use client';
-import React from 'react';
+'use client&#39;;
+import React from &#39;react&#39;;
 
 export default function Module21() {
   return (
     <main className="min-h-screen bg-black text-white px-6 py-10">
       <section className="max-w-6xl mx-auto">
         <h1 className="text-5xl font-bold text-blue-400 mb-6">
-          📰 Omega News Sentiment Engine
+          ?? Omega News Sentiment Engine
         </h1>
         <p className="text-lg text-gray-300 mb-8">
-          Omega's Sentiment Engine scrapes and parses real-time news, social media, and global events. It uses NLP and transformer-based models to classify sentiment and predict market reactions instantly.
+          Omega&#39;s Sentiment Engine scrapes and parses real-time news, social media, and global events. It uses NLP and transformer-based models to classify sentiment and predict market reactions instantly.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gray-900 border border-blue-500 p-6 rounded-xl">
-            <h2 className="text-xl text-blue-300 font-semibold mb-2">📡 Global Feed Monitor</h2>
+            <h2 className="text-xl text-blue-300 font-semibold mb-2">?? Global Feed Monitor</h2>
             <ul className="list-disc list-inside text-gray-200">
               <li>News, tweets, Reddit, and financial blogs</li>
               <li>Real-time web socket ingestion</li>
@@ -23,7 +23,7 @@ export default function Module21() {
           </div>
 
           <div className="bg-gray-900 border border-blue-500 p-6 rounded-xl">
-            <h2 className="text-xl text-blue-300 font-semibold mb-2">🧠 Sentiment Classifier</h2>
+            <h2 className="text-xl text-blue-300 font-semibold mb-2">?? Sentiment Classifier</h2>
             <ul className="list-disc list-inside text-gray-200">
               <li>Trained on finance-specific datasets</li>
               <li>Classifies into bullish, bearish, neutral</li>
@@ -32,10 +32,10 @@ export default function Module21() {
           </div>
 
           <div className="bg-gray-900 border border-blue-500 p-6 rounded-xl">
-            <h2 className="text-xl text-blue-300 font-semibold mb-2">📈 Impact Predictor</h2>
+            <h2 className="text-xl text-blue-300 font-semibold mb-2">?? Impact Predictor</h2>
             <ul className="list-disc list-inside text-gray-200">
               <li>Estimates effect on stocks, crypto, forex</li>
-              <li>Feeds into Omega’s trading core</li>
+              <li>Feeds into Omega�s trading core</li>
               <li>Triggers defense or offense in strategies</li>
             </ul>
           </div>

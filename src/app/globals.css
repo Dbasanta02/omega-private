@@ -1,39 +1,38 @@
-/* === Omega Global Styles === */
-
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html, body {
-    @apply bg-gradient-to-br from-gray-800 via-black to-gray-950 text-neon-cyan font-sans antialiased;
-  }
-
-  ::selection {
-    @apply bg-neon-green text-black;
-  }
-
-  body {
+  html {
     scroll-behavior: smooth;
   }
-}
-
-@layer components {
-  .card-glass {
-    @apply bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 shadow-lg transition-all duration-300 hover:scale-[1.01];
+  ::-webkit-scrollbar {
+    width: 8px;
   }
-
-  .neon-glow {
-    @apply text-shadow-lg drop-shadow-[0_0_10px_rgba(57,255,190,0.8)];
+  ::-webkit-scrollbar-thumb {
+    background: #39FFBE;
+    border-radius: 10px;
   }
-
-  .btn-omega {
-    @apply px-4 py-2 rounded-lg bg-neon-blue hover:bg-neon-cyan text-white font-semibold shadow-lg transition-all;
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
   }
 }
 
 @layer utilities {
-  .text-shadow-lg {
-    text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg;
+  }
+  .neon-border {
+    border: 2px solid transparent;
+    border-image: linear-gradient(90deg, #39FFBE, #437EFF) 1;
+    border-radius: 1rem;
+  }
+  .text-glow {
+    text-shadow: 0 0 5px #39FFBE, 0 0 10px #437EFF;
+  }
+  .box-glow {
+    box-shadow: 0 0 15px rgba(57, 255, 190, 0.5), 0 0 25px rgba(67, 126, 255, 0.5);
   }
 }

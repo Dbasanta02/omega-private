@@ -3,41 +3,19 @@ import React from 'react';
 
 export default function Module3() {
   return (
-    <main className="min-h-screen bg-black text-white p-10">
-      <section className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold text-blue-500 mb-4">🚀 Omega Mission Control</h1>
-        <p className="text-lg text-gray-300 mb-6">
-          This is the central command interface where all modules, diagnostics, and live controls are initiated. Omega receives strategic directives and executes operational flows from this interface.
+    <div className='space-y-6 p-6 text-white'>
+      <div className='border border-white/20 rounded-2xl p-6 shadow-xl bg-white/5'>
+        <h2 className='text-3xl font-bold mb-2 text-[#39FFBE]'>Module 3</h2>
+        <p className='text-gray-300'>
+          This module represents a specialized cognitive layer in Omega's architecture. Each upgrade embeds intelligence, logic flow, and real-time adaptation.
         </p>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-gray-900 rounded-xl p-6 border border-blue-500 shadow-lg">
-            <h2 className="text-2xl font-semibold text-blue-400 mb-2">🧠 Intelligence Modules</h2>
-            <ul className="list-disc list-inside text-gray-300">
-              <li>Sentience Core</li>
-              <li>Reinforcement Engine</li>
-              <li>Prediction Matrix</li>
-              <li>Self-Repair Subsystem</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 rounded-xl p-6 border border-blue-500 shadow-lg">
-            <h2 className="text-2xl font-semibold text-blue-400 mb-2">📡 System Controls</h2>
-            <ul className="list-disc list-inside text-gray-300">
-              <li>Live Market Activation</li>
-              <li>Macro/Micro Strategy Sync</li>
-              <li>Neural-Logic Calibration</li>
-              <li>Safety Compliance Protocol</li>
-            </ul>
-          </div>
+      </div>
+      <div className='border border-[#437EFF] bg-black/30 backdrop-blur-md rounded-xl p-6'>
+        <h3 className='text-xl font-semibold mb-2 text-[#437EFF]'>Live Intelligence Panel</h3>
+        <div className='h-40 bg-white/10 rounded-lg flex items-center justify-center text-sm text-gray-400'>
+          [Live module output and AI logic visualizations will appear here.]
         </div>
-
-        <div className="mt-10 text-center">
-          <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-black font-semibold rounded-2xl shadow-lg transition-all duration-200">
-            Launch Omega Sequence
-          </button>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }

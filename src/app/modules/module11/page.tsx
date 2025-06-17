@@ -3,39 +3,19 @@ import React from 'react';
 
 export default function Module11() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-10">
-      <section className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-pink-400 mb-6">🧠 Omega AI Trade Commentary Engine</h1>
-        <p className="text-lg text-gray-300 mb-10">
-          Omega explains every trade with transparent, real-time commentary — revealing the logic, risks, probabilities, and expected returns behind each action.
+    <div className='space-y-6 p-6 text-white'>
+      <div className='border border-white/20 rounded-2xl p-6 shadow-xl bg-white/5'>
+        <h2 className='text-3xl font-bold mb-2 text-[#39FFBE]'>Module 11</h2>
+        <p className='text-gray-300'>
+          This module represents a specialized cognitive layer in Omega's architecture. Each upgrade embeds intelligence, logic flow, and real-time adaptation.
         </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="bg-gray-900 border border-pink-500 p-6 rounded-xl shadow-xl">
-            <h2 className="text-xl font-semibold text-pink-300 mb-2">📊 Live Trade Justification</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>Real-time explanation of every executed trade</li>
-              <li>Probability reasoning and confidence levels</li>
-              <li>Linked back to data, models, and news input</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-pink-500 p-6 rounded-xl shadow-xl">
-            <h2 className="text-xl font-semibold text-pink-300 mb-2">🧩 Model Commentary Fusion</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>LLM-powered clarity in human-readable form</li>
-              <li>Uses symbolic + probabilistic logic</li>
-              <li>Translates complex systems into intuition</li>
-            </ul>
-          </div>
+      </div>
+      <div className='border border-[#437EFF] bg-black/30 backdrop-blur-md rounded-xl p-6'>
+        <h3 className='text-xl font-semibold mb-2 text-[#437EFF]'>Live Intelligence Panel</h3>
+        <div className='h-40 bg-white/10 rounded-lg flex items-center justify-center text-sm text-gray-400'>
+          [Live module output and AI logic visualizations will appear here.]
         </div>
-
-        <div className="mt-10 text-center">
-          <button className="px-6 py-3 bg-pink-400 hover:bg-pink-500 text-black font-semibold rounded-2xl shadow-md transition-all duration-200">
-            Generate Commentary
-          </button>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }

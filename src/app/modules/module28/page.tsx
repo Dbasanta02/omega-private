@@ -3,43 +3,19 @@ import React from 'react';
 
 export default function Module28() {
   return (
-    <main className="min-h-screen bg-black text-white px-10 py-16">
-      <section className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-bold text-indigo-400 mb-6">
-          ⚔️ Omega Tactical Signal Matrix
-        </h1>
-        <p className="text-lg text-gray-300 mb-10">
-          This module is Omega’s adaptive brain for coordinating signals across scalping, swing, macro, sentiment, and AI-driven strategies. It ensures every trade decision is validated, optimized, and aligned with broader market context.
+    <div className='space-y-6 p-6 text-white'>
+      <div className='border border-white/20 rounded-2xl p-6 shadow-xl bg-white/5'>
+        <h2 className='text-3xl font-bold mb-2 text-[#39FFBE]'>Module 28</h2>
+        <p className='text-gray-300'>
+          This god-tier module enhances Omega's internal structure, enabling advanced reasoning, data synthesis, and market adaptation in real-time.
         </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-gray-900 border border-indigo-500 p-6 rounded-xl">
-            <h2 className="text-xl text-indigo-300 font-semibold mb-2">📡 Multi-Signal Integration</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>Scalping + Swing + Macro + Event signal fusion</li>
-              <li>Strategy-weighted adaptive signal blending</li>
-              <li>Neural signal reinforcement conditioning</li>
-              <li>Live rejection of false-positive setups</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-indigo-500 p-6 rounded-xl">
-            <h2 className="text-xl text-indigo-300 font-semibold mb-2">🧠 Contextual Market Awareness</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>Volatility-aware logic trees</li>
-              <li>Liquidity zones + sentiment cross-scans</li>
-              <li>News-aligned signal modulation</li>
-              <li>Quantum model pattern optimization</li>
-            </ul>
-          </div>
+      </div>
+      <div className='border border-[#437EFF] bg-black/30 backdrop-blur-md rounded-xl p-6'>
+        <h3 className='text-xl font-semibold mb-2 text-[#437EFF]'>Autonomous Cognition Feed</h3>
+        <div className='h-40 bg-white/10 rounded-lg flex items-center justify-center text-sm text-gray-400'>
+          [Real-time logic, visual modules, and AI activity will appear here.]
         </div>
-
-        <div className="mt-10 text-center">
-          <button className="px-6 py-3 bg-indigo-400 hover:bg-indigo-500 text-black font-bold rounded-2xl transition duration-300">
-            Launch Signal Matrix
-          </button>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }

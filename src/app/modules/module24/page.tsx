@@ -3,53 +3,19 @@ import React from 'react';
 
 export default function Module24() {
   return (
-    <main className="min-h-screen bg-black text-white p-10">
-      <section className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-red-400 mb-6">
-          🛡️ Omega Real-Time Risk Manager
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          This module continuously monitors Omega’s capital exposure, volatility patterns, regulatory thresholds, and trade confidence. It enforces safety overrides and intelligent stop-loss logic using real-time data.
+    <div className='space-y-6 p-6 text-white'>
+      <div className='border border-white/20 rounded-2xl p-6 shadow-xl bg-white/5'>
+        <h2 className='text-3xl font-bold mb-2 text-[#39FFBE]'>Module 24</h2>
+        <p className='text-gray-300'>
+          This god-tier module enhances Omega's internal structure, enabling advanced reasoning, data synthesis, and market adaptation in real-time.
         </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-900 border border-red-500 p-6 rounded-xl">
-            <h2 className="text-xl font-semibold text-red-300 mb-2">🔍 Risk Factors</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>Real-time volatility scan</li>
-              <li>Position leverage monitor</li>
-              <li>Trade confidence analysis</li>
-              <li>Liquidity heat zones</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-red-500 p-6 rounded-xl">
-            <h2 className="text-xl font-semibold text-red-300 mb-2">🛑 Control Mechanisms</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>AI-powered stop-loss override</li>
-              <li>Dynamic capital throttling</li>
-              <li>Market freeze detection</li>
-              <li>Legal compliance halt</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-red-500 p-6 rounded-xl">
-            <h2 className="text-xl font-semibold text-red-300 mb-2">⚖️ Risk Metrics Displayed</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>Value at Risk (VaR)</li>
-              <li>Expected Shortfall (CVaR)</li>
-              <li>Max Drawdown Realtime</li>
-              <li>Stress Scenario Heatmap</li>
-            </ul>
-          </div>
+      </div>
+      <div className='border border-[#437EFF] bg-black/30 backdrop-blur-md rounded-xl p-6'>
+        <h3 className='text-xl font-semibold mb-2 text-[#437EFF]'>Autonomous Cognition Feed</h3>
+        <div className='h-40 bg-white/10 rounded-lg flex items-center justify-center text-sm text-gray-400'>
+          [Real-time logic, visual modules, and AI activity will appear here.]
         </div>
-
-        <div className="mt-10 text-center">
-          <button className="px-6 py-3 bg-red-500 hover:bg-red-600 text-black font-bold rounded-2xl transition duration-300">
-            Analyze Risk Snapshot
-          </button>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }

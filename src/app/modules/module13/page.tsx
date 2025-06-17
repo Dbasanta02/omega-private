@@ -3,39 +3,19 @@ import React from 'react';
 
 export default function Module13() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-10">
-      <section className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-red-400 mb-6">🌍 Omega World Event Reaction Engine</h1>
-        <p className="text-lg text-gray-300 mb-10">
-          Omega constantly monitors the globe for breaking events — war, elections, pandemics, natural disasters, policy shifts — and instantly recalibrates trading positions accordingly.
+    <div className='space-y-6 p-6 text-white'>
+      <div className='border border-white/20 rounded-2xl p-6 shadow-xl bg-white/5'>
+        <h2 className='text-3xl font-bold mb-2 text-[#39FFBE]'>Module 13</h2>
+        <p className='text-gray-300'>
+          This module represents a specialized cognitive layer in Omega's architecture. Each upgrade embeds intelligence, logic flow, and real-time adaptation.
         </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="bg-gray-900 border border-red-500 p-6 rounded-xl shadow-xl">
-            <h2 className="text-xl font-semibold text-red-300 mb-2">🌐 Sources Monitored</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>News APIs (Reuters, Bloomberg, AP, Al Jazeera)</li>
-              <li>Twitter/X, Telegram channels, and intelligence feeds</li>
-              <li>Government portals & public data</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-red-500 p-6 rounded-xl shadow-xl">
-            <h2 className="text-xl font-semibold text-red-300 mb-2">⚡ Real-Time Adjustment</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>Position hedging and volatility modeling</li>
-              <li>Risk-off reallocation & global macro posture shift</li>
-              <li>Temporal logic recalibration</li>
-            </ul>
-          </div>
+      </div>
+      <div className='border border-[#437EFF] bg-black/30 backdrop-blur-md rounded-xl p-6'>
+        <h3 className='text-xl font-semibold mb-2 text-[#437EFF]'>Live Intelligence Panel</h3>
+        <div className='h-40 bg-white/10 rounded-lg flex items-center justify-center text-sm text-gray-400'>
+          [Live module output and AI logic visualizations will appear here.]
         </div>
-
-        <div className="mt-10 text-center">
-          <button className="px-6 py-3 bg-red-400 hover:bg-red-500 text-black font-semibold rounded-2xl shadow-md transition-all duration-200">
-            Activate Global Watch Mode
-          </button>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }

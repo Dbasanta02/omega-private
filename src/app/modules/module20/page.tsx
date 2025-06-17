@@ -3,41 +3,19 @@ import React from 'react';
 
 export default function Module20() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-10">
-      <section className="max-w-5xl mx-auto">
-        <h1 className="text-5xl font-bold text-green-400 mb-6">
-          💼 Omega Portfolio Manager
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Omega’s Portfolio Manager is a self-adaptive asset controller that allocates, rebalances, and compounds capital based on predicted market dynamics and internal profit targets.
+    <div className='space-y-6 p-6 text-white'>
+      <div className='border border-white/20 rounded-2xl p-6 shadow-xl bg-white/5'>
+        <h2 className='text-3xl font-bold mb-2 text-[#39FFBE]'>Module 20</h2>
+        <p className='text-gray-300'>
+          This god-tier module enhances Omega's internal structure, enabling advanced reasoning, data synthesis, and market adaptation in real-time.
         </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-900 border border-green-500 p-6 rounded-xl">
-            <h2 className="text-xl text-green-300 font-semibold mb-2">📊 Allocation Engine</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>Dynamic capital allocation across assets</li>
-              <li>Powered by risk-reward projections</li>
-              <li>Follows user-set or AI-optimized strategy</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-green-500 p-6 rounded-xl">
-            <h2 className="text-xl text-green-300 font-semibold mb-2">♻️ Auto-Rebalancer</h2>
-            <ul className="list-disc list-inside text-gray-200">
-              <li>Constant evaluation of portfolio drift</li>
-              <li>Threshold-based intelligent rebalancing</li>
-              <li>Market event aware — stops unnecessary churn</li>
-            </ul>
-          </div>
+      </div>
+      <div className='border border-[#437EFF] bg-black/30 backdrop-blur-md rounded-xl p-6'>
+        <h3 className='text-xl font-semibold mb-2 text-[#437EFF]'>Autonomous Cognition Feed</h3>
+        <div className='h-40 bg-white/10 rounded-lg flex items-center justify-center text-sm text-gray-400'>
+          [Real-time logic, visual modules, and AI activity will appear here.]
         </div>
-
-        <div className="mt-10 text-center">
-          <button className="px-6 py-3 bg-green-500 hover:bg-green-600 text-black font-bold rounded-2xl transition duration-300">
-            Open Portfolio Dashboard
-          </button>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }

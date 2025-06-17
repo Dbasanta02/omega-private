@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const tabs = [
-  { name: 'Home', href: '/' },
-  { name: 'Modules', href: '/modules' },
-  { name: 'Core Nexus', href: '/core' },
+  { name: 'Dashboard', href: '/' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Settings', href: '/settings' },
 ];
 
 export default function Tabs() {
@@ -18,7 +18,11 @@ export default function Tabs() {
         <Link
           key={tab.href}
           href={tab.href}
-          className={\ounded-xl px-4 py-2 text-sm font-semibold transition-all hover:bg-white/10 \}
+          className={`rounded-lg px-3 py-1 text-sm font-medium transition-all ${
+            pathname === tab.href
+              ? 'bg-white text-black shadow'
+              : 'text-zinc-500 hover:text-zinc-900'
+          }`}
         >
           {tab.name}
         </Link>

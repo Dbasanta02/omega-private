@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import React from 'react';
 
 export default function Module1() {
@@ -7,7 +7,7 @@ export default function Module1() {
       <div className='border border-white/20 rounded-2xl p-6 shadow-xl bg-white/5'>
         <h2 className='text-3xl font-bold mb-2 text-[#39FFBE]'>Omega Core Mind</h2>
         <p className='text-gray-300'>
-          This is the master control center of Omega's intelligence architecture. All modules, logic paths,
+          This is the master control center of Omega&#39;s intelligence architecture. All modules, logic paths,
           self-healing updates, and neural expansions originate here.
         </p>
       </div>

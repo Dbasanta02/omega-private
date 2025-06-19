@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import React from 'react';
 
 export default function Module7() {
@@ -7,7 +7,7 @@ export default function Module7() {
       <div className='border border-white/20 rounded-2xl p-6 shadow-xl bg-white/5'>
         <h2 className='text-3xl font-bold mb-2 text-[#39FFBE]'>Module 7</h2>
         <p className='text-gray-300'>
-          This module represents a specialized cognitive layer in Omega's architecture. Each upgrade embeds intelligence, logic flow, and real-time adaptation.
+          This module represents a specialized cognitive layer in Omega&#39;s architecture. Each upgrade embeds intelligence, logic flow, and real-time adaptation.
         </p>
       </div>
       <div className='border border-[#437EFF] bg-black/30 backdrop-blur-md rounded-xl p-6'>

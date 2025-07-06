@@ -18,7 +18,7 @@ const candlestickData = [
 
 export default function ChartDemo() {
   const chartContainerRef = useRef<HTMLDivElement>(null);
-  const chartRef = useRef<IChartApi>();
+  const chartRef = useRef<IChartApi | null>(null); // ✅ FIXED
 
   useEffect(() => {
     if (!chartContainerRef.current) return;
@@ -73,3 +73,4 @@ export default function ChartDemo() {
     />
   );
 }
+

@@ -1,18 +1,23 @@
-﻿import './globals.css'
+﻿import { ReactNode } from 'react'
+import './globals.css'
+import AnimatedLayout from '../components/AnimatedLayout'
+import { ThemeProvider } from '../components/ThemeProvider'
 
 export const metadata = {
-  title: 'Omega',
-  description: 'Omega God-tier AI Dashboard',
+  title: 'Omega Dashboard',
+  description: 'Next-gen intelligent trading dashboard',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>
+          <AnimatedLayout>
+            {children}
+          </AnimatedLayout>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

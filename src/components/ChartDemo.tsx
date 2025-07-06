@@ -2,11 +2,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import {
-  createChart,
-  CrosshairMode,
-  IChartApi,
-} from "lightweight-charts";
+import { createChart, CrosshairMode } from "lightweight-charts";
 
 const candlestickData = [
   { time: '2024-07-01', open: 101, high: 110, low: 95, close: 105 },
@@ -18,12 +14,11 @@ const candlestickData = [
 
 export default function ChartDemo() {
   const chartContainerRef = useRef<HTMLDivElement>(null);
-  const chartRef = useRef<IChartApi | null>(null);
 
   useEffect(() => {
     if (!chartContainerRef.current) return;
 
-    const chart = createChart(chartContainerRef.current, {
+    const rawChart = createChart(chartContainerRef.current, {
       layout: {
         background: { color: "#0d0d0d" },
         textColor: "#FFFFFF",
@@ -39,10 +34,10 @@ export default function ChartDemo() {
       },
     });
 
-    chartRef.current = chart;
+    // ✅ Cast chart to any to bypass IChartApi type limitations
+    const chart = rawChart as any;
 
-    // 👇 Fix: cast chart to `any` to access candlestick method
-    const candleSeries = (chart as any).addCandlestickSeries({
+    const candleSeries = chart.addCandlestickSeries({
       upColor: "#26a69a",
       downColor: "#ef5350",
       borderUpColor: "#26a69a",

@@ -5,7 +5,6 @@ import React, { useEffect, useRef } from "react";
 import {
   createChart,
   CrosshairMode,
-  ColorType,
   IChartApi,
 } from "lightweight-charts";
 

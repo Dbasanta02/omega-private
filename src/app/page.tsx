@@ -1,14 +1,10 @@
-import ChartDemo from '../components/ChartDemo'
-import DarkModeToggle from '../components/DarkModeToggle'
+import PageWrapper from '../components/PageWrapper'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="p-8 space-y-6">
-      <div className="flex justify-between items-center">
-        <h1 className="text-4xl font-bold">Welcome to Omega Dashboard</h1>
-        <DarkModeToggle />
-      </div>
-      <ChartDemo />
-    </main>
+    <PageWrapper>
+      <h2 className="text-2xl mb-4">Welcome to Omega</h2>
+      <p>This is your dashboard. Use the sidebar to explore Trading, AI, and Settings.</p>
+    </PageWrapper>
   )
 }

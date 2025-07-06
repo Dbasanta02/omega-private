@@ -1,60 +1,29 @@
 'use client'
 
-import { Line } from 'react-chartjs-2'
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-)
+const data = [
+  { name: 'Mon', value: 65 },
+  { name: 'Tue', value: 59 },
+  { name: 'Wed', value: 80 },
+  { name: 'Thu', value: 81 },
+  { name: 'Fri', value: 56 },
+  { name: 'Sat', value: 55 },
+  { name: 'Sun', value: 40 },
+]
 
 export default function ChartDemo() {
-  const data = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-    datasets: [
-      {
-        label: 'Sales',
-        data: [65, 59, 80, 81, 56, 55, 40],
-        fill: false,
-        borderColor: '#39ffbe',
-        tension: 0.1,
-      },
-    ],
-  }
-
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: { position: 'top' as const },
-      title: {
-        display: true,
-        text: 'Monthly Sales Data',
-        color: '#fff',
-      },
-    },
-    scales: {
-      x: {
-        ticks: { color: '#ccc' },
-      },
-      y: {
-        ticks: { color: '#ccc' },
-      },
-    },
-  }
-
-  return <Line data={data} options={options} />
+  return (
+    <div className="w-full h-[300px] bg-gray-900 p-4 rounded-xl shadow-md">
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#333" />
+          <XAxis dataKey="name" stroke="#aaa" />
+          <YAxis stroke="#aaa" />
+          <Tooltip />
+          <Line type="monotone" dataKey="value" stroke="#00ffe1" strokeWidth={3} dot={{ r: 5 }} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  )
 }

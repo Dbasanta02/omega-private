@@ -18,7 +18,7 @@ const candlestickData = [
 
 export default function ChartDemo() {
   const chartContainerRef = useRef<HTMLDivElement>(null);
-  const chartRef = useRef<IChartApi | null>(null); // ✅ FIXED
+  const chartRef = useRef<IChartApi | null>(null);
 
   useEffect(() => {
     if (!chartContainerRef.current) return;
@@ -41,7 +41,8 @@ export default function ChartDemo() {
 
     chartRef.current = chart;
 
-    const candleSeries = chart.addCandlestickSeries({
+    // 👇 Fix: cast chart to `any` to access candlestick method
+    const candleSeries = (chart as any).addCandlestickSeries({
       upColor: "#26a69a",
       downColor: "#ef5350",
       borderUpColor: "#26a69a",
@@ -73,4 +74,3 @@ export default function ChartDemo() {
     />
   );
 }
-

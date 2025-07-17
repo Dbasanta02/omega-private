@@ -1,10 +1,12 @@
-import PageWrapper from '../../components/PageWrapper'
+"use client";
+
+import React from "react";
 
 export default function SettingsPage() {
   return (
-    <PageWrapper>
-      <h2 className="text-2xl mb-4">Settings</h2>
-      <p>Coming soon: toggle options, security, customization.</p>
-    </PageWrapper>
-  )
+    <div className="p-6 text-white">
+      <h1 className="text-3xl font-bold mb-4">Settings</h1>
+      <p>Configure system preferences, themes, notifications, and more.</p>
+    </div>
+  );
 }

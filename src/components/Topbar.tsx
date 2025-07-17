@@ -1,17 +1,15 @@
-'use client'
-
-import DarkModeToggle from './DarkModeToggle'
+// Topbar.tsx
+"use client";
 
 export default function Topbar() {
   return (
-    <header className="w-full h-16 bg-gray-800 text-white flex justify-between items-center px-6">
-      <span className="text-lg font-semibold">Omega Dashboard</span>
-      <div className="flex items-center gap-4">
-        <DarkModeToggle />
-        <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center font-bold">
-          N
-        </div>
+    <header className="w-full h-16 bg-gray-950 border-b border-gray-800 px-6 flex items-center justify-between">
+      <div className="text-xl font-semibold text-white tracking-wide">
+        Omega Brain 👁️‍🗨️ Live Interface
+      </div>
+      <div className="text-sm text-gray-400">
+        Alpha Status: <span className="text-green-400">Online</span>
       </div>
     </header>
-  )
+  );
 }

@@ -1,10 +1,13 @@
-import PageWrapper from '../../components/PageWrapper'
+"use client";
 
-export default function AIAssistantPage() {
+import React from "react";
+import AssistantChat from "@/components/AssistantChat";
+
+export default function AIPage() {
   return (
-    <PageWrapper>
-      <h2 className="text-2xl mb-4">AI Assistant</h2>
-      <p>Chat interface and smart insight engine coming soon.</p>
-    </PageWrapper>
-  )
+    <div className="p-6 text-white">
+      <h1 className="text-3xl font-bold mb-4">Omega AI Assistant</h1>
+      <AssistantChat />
+    </div>
+  );
 }

@@ -1,0 +1,52 @@
+﻿'use client';
+
+import dynamic from "next/dynamic";
+import { useState } from "react";
+
+const ChartWrapper = dynamic(() => import("@/components/ChartWrapper"), { ssr: false });
+const AssistantChat = dynamic(() => import("@/components/AssistantChat"), { ssr: false });
+
+export default function Home() {
+  const [selectedTab, setSelectedTab] = useState("Chart");
+
+  return (
+    <div className="flex h-screen w-screen bg-black text-white">
+      {/* Sidebar */}
+      <div className="w-64 bg-gray-900 p-6 space-y-6">
+        <h1 className="text-3xl font-bold text-green-400">Ω Omega</h1>
+        <p className="text-xs text-gray-400">Powered by AI</p>
+        <ul className="space-y-2">
+          {["Chart", "Analytics", "Settings"].map((tab) => (
+            <li key={tab}>
+              <button
+                className={w-full text-left px-3 py-2 rounded hover:bg-gray-800 }
+                onClick={() => setSelectedTab(tab)}
+              >
+                {tab}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Main Content */}
+      <div className="flex-1 p-6 overflow-auto">
+        {selectedTab === "Chart" && (
+          <div className="space-y-6">
+            <div className="text-xl font-semibold">Live Market Chart</div>
+            <ChartWrapper />
+          </div>
+        )}
+        {selectedTab === "Analytics" && (
+          <div className="text-xl text-gray-400">📊 Analytics Engine Coming Soon...</div>
+        )}
+        {selectedTab === "Settings" && (
+          <div className="text-xl text-gray-400">⚙️ Settings Interface Coming Soon...</div>
+        )}
+        <div className="mt-10">
+          <AssistantChat />
+        </div>
+      </div>
+    </div>
+  );
+}
